@@ -92,7 +92,7 @@ Using ```curl``` to Test the API
 
     {
         "email": "kuriaisac@gmail.com",
-        "local-time": "2023-10-05T14:30:45.123456Z",
+        "local-time": "2023-10-05T14:30:45Z",
         "github-url": "https://github.com"
     }
 
