@@ -21,7 +21,7 @@ required_details = {
     1: {
         "email": "kuriaisac@gmail.com",
         "current_datetime": "",
-        "github_url": "https://github.com"
+        "github_url": "https://github.com/Inifinitech/my-ess-hng"
     }
 }
 
@@ -39,7 +39,7 @@ def home():
 @app.get('/get-details')
 def details():
     try:
-        required_details[1]["current_datetime"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+        required_details[1]["current_datetime"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
         return ORJSONResponse(required_details[1])
     except Exception as err:
