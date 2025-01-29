@@ -83,7 +83,7 @@ Using ```curl``` to Test the API
 
      {
         "message": "Welcome"
-        }
+     }
 
  2. Access the ```/get-details``` endpoint:
     ``` curl -X GET http://127.0.0.1:8000/get-details```
@@ -91,10 +91,10 @@ Using ```curl``` to Test the API
   **Response:**
 
     {
-          "email": "kuriaisac@gmail.com",
-          "local-time": "2023-10-05T14:30:45.123456Z",
-          "github-url": "https://github.com"
-        }
+        "email": "kuriaisac@gmail.com",
+        "local-time": "2023-10-05T14:30:45.123456Z",
+        "github-url": "https://github.com"
+    }
 
 ### CORS Configuration
 
