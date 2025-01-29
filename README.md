@@ -42,14 +42,17 @@ Follow these steps to set up and run the project locally.
    cd your-repo-name
 
 2. **Create a virtual environment** (optional)
-    ```python -m venv venv
+    ```bash
+    python -m venv venv
     source venv/bin/activate
 
 3. **Install Dependencies**
-    ```pip install "fastapi[all]" uvicorn orjson```
+    ```bash
+    pip install "fastapi[all]" uvicorn orjson
 
 4. Run the server
-    ```uvicorn main:app --reload```
+    ```bash
+    uvicorn main:app --reload
 
 
 ### API Documentation
@@ -78,7 +81,7 @@ Using ```curl``` to Test the API
 
   **Response:**
 
-    ``` {
+     {
         "message": "Welcome"
         }
 
@@ -87,7 +90,7 @@ Using ```curl``` to Test the API
 
   **Response:**
 
-    ``` {
+    {
           "email": "kuriaisac@gmail.com",
           "local-time": "2023-10-05T14:30:45.123456Z",
           "github-url": "https://github.com"
