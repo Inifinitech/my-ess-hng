@@ -56,7 +56,7 @@ Follow these steps to set up and run the project locally.
 
 ## Endpoint URL
 
-    . Base URL: ```http://127.0.0.1:8000```
+ . Base URL: ```http://127.0.0.1:8000```
 
 ## Endpoint
 
@@ -73,19 +73,19 @@ Follow these steps to set up and run the project locally.
 
 Using ```curl``` to Test the API
 
-    1. Access the root endpoint:
+ 1. Access the root endpoint:
     ```curl -X GET http://127.0.0.1:8000/```
 
-    **Response:**
+  **Response:**
 
     ``` {
         "message": "Welcome"
         }
 
-    2. Access the ```/get-details``` endpoint:
+ 2. Access the ```/get-details``` endpoint:
     ``` curl -X GET http://127.0.0.1:8000/get-details```
 
-    **Response:**
+  **Response:**
 
     ``` {
           "email": "kuriaisac@gmail.com",
