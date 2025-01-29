@@ -1,14 +1,27 @@
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
-from datetime import datetime
+from datetime import datetime, timezone
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 required_details = {
     1: {
         "email": "kuriaisac@gmail.com",
-        "local-time": "",
-        "github-url": "https://github.com"
+        "current_datetime": "",
+        "github_url": "https://github.com"
     }
 }
 
@@ -26,7 +39,7 @@ def home():
 @app.get('/get-details')
 def details():
     try:
-        required_details[1]["local-time"] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        required_details[1]["current_datetime"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
         return ORJSONResponse(required_details[1])
     except Exception as err:
